@@ -8,6 +8,7 @@
 - [Important Recovery Mode Information](#-important-recovery-mode-information)
 - [Requirements](#requirements)
 - [Tools](#tools)
+  - [device_info](#device_info)
   - [enable_adb_python](#enable_adb_python)
   - [backup_via_adb](#backup_via_adb)
   - [dropbear](#dropbear)
@@ -72,6 +73,37 @@ This is critical when installing utilities, scripts, and configuration files.
 ---
 
 ## Tools
+
+### device_info
+
+**Purpose:** Device information and diagnostic data collected from the device.
+
+**Description:**  
+Contains device specifications, system information, and diagnostic output collected from the Alcatel EE71 device. This information is useful for understanding device hardware, firmware versions, and system configuration.
+
+**Location:** `device_info/`
+
+**Contents:**
+- `device_info.txt` - Complete device information including:
+  - CPU specifications (Qualcomm MDM9640, ARMv7)
+  - Kernel version (Linux 3.10.49)
+  - MTD partition layout
+  - USB configuration
+  - Network interfaces
+  - SoC information
+- `dmesg_full.txt` - Full kernel boot messages and system diagnostics
+
+**Usage:**
+
+This folder contains reference information about the device hardware and firmware. It's primarily for documentation and reference purposes, helping developers understand:
+- Device partition structure
+- Hardware specifications
+- System capabilities
+- Network interface configuration
+
+**Note:** This information was collected from a working device via ADB. The data may vary slightly between different firmware versions or device batches.
+
+---
 
 ### enable_adb_python
 

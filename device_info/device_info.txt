@@ -1,0 +1,62 @@
+===== ADB SHELL id =====
+uid=0(root) gid=0(root)
+===== CPUINFO (/proc/cpuinfo) =====
+processor	: 0
+model name	: ARMv7 Processor rev 5 (v7l)
+BogoMIPS	: 38.40
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+Hardware	: Qualcomm Technologies, Inc MDM9640
+Revision	: 0000
+Serial		: 0000000000000000
+Processor	: ARMv7 Processor rev 5 (v7l)
+===== UNAME (kernel/version) =====
+Linux mdm9640 3.10.49 #1 PREEMPT Sun Apr 24 18:41:19 CST 2022 armv7l GNU/Linux
+===== SoC via sysfs (soc0) =====
+machine: MDM9640
+soc_id: 234
+platform_version: 0
+hw_platform: Unknown
+build_id: 9x45A-AAATANAZA-40000000
+serial_number: 0000000000
+===== Device Tree (model/compatible) =====
+===== MTD layout & modem signature =====
+dev:    size   erasesize  name
+mtd0: 00140000 00020000 "sbl"
+mtd1: 00140000 00020000 "mibib"
+mtd2: 00b00000 00020000 "efs2"
+mtd3: 00100000 00020000 "tz"
+mtd4: 00100000 00020000 "rpm"
+mtd5: 00140000 00020000 "aboot"
+mtd6: 00740000 00020000 "boot"
+mtd7: 03440000 00020000 "modem"
+mtd8: 00200000 00020000 "rfbackup"
+mtd9: 01040000 00020000 "recoveryfs"
+mtd10: 00180000 00020000 "misc"
+mtd11: 00740000 00020000 "recovery"
+mtd12: 03740000 00020000 "cache"
+mtd13: 01000000 00020000 "cdrom"
+mtd14: 01240000 00020000 "jrdresource"
+mtd15: 03f40000 00020000 "system"
+--- modem strings head ---
+UBI#
+UBI!
+===== USB android composition (/sys/class/android_usb/android0) =====
+functions: rndis_qc,diag,ffs,serial,mass_storage
+state: CONFIGURED
+enable: 1
+idVendor: 1bbb
+idProduct: 0196
+iManufacturer: Alcatel
+iProduct: MobileBroadBand
+iSerial: xxxxxxxx
+===== Network interfaces (usb/rndis/ecm/ncm/rmnet) =====
+3: rmnet_ipa0: <> mtu 2000 qdisc noop qlen 1000\    link/[530] 
+4: rndis0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000\    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+rmnet_ipa0 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+rndis0    Link encap:Ethernet  HWaddr AA:BB:CC:DD:EE:FF  

@@ -1,0 +1,886 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.49 (jianrong.wei@TctSwd) (gcc version 4.8.1 (GCC) ) #1 PREEMPT Sun Apr 24 18:41:19 CST 2022
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: Qualcomm Technologies, Inc. MSM 9640 (Flattened Device Tree), model: Qualcomm Technologies, Inc. MSM 9640 V2 MTP
+[    0.000000] cma: early_recovery_mtd(9)
+[    0.000000] cma: JRD: rootfs is recoveryfs, release most of memory in peripheral1_mem
+[    0.000000] cma: Found peripheral1_region@0x81800000, memory base 0x81800000, size 3 MiB, limit 0xffffffff
+[    0.000000] cma: Found peripheral2_region@0x87d00000, memory base 0x87d00000, size 3 MiB, limit 0xffffffff
+[    0.000000] cma: Found audio_region@0, memory base 0x00000000, size 0 MiB, limit 0xffffffff
+[    0.000000] cma: CMA: reserved 3 MiB at 0x81800000 for peripheral1_mem
+[    0.000000] cma: CMA: reserved 3 MiB at 0x87d00000 for peripheral2_mem
+[    0.000000] cma: CMA: reserved 4 MiB at 0x8fc00000 for audio_mem
+[    0.000000] cma: CMA: reserved 16 MiB at 0x8ec00000 for default region
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] On node 0 totalpages: 64000
+[    0.000000] free_area_init_node: node 0, pgdat c0a771d0, node_mem_map c0bdc000
+[    0.000000]   Normal zone: 512 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 64000 pages, LIFO batch:15
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 63488
+[    0.000000] Kernel command line: noinitrd rw console=ttyHSL0,115200,n8 androidboot.hardware=qcom ehci-hcd.park=3 msm_rtb.filter=0x37 androidboot.serialno=xxxxxxxx androidboot.authorized_kernel=true androidboot.baseband=msm rootfstype=ubifs rootflags=bulk_read root=ubi0:rootfs ubi.mtd=9
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 220732K/256000K available (7089K kernel code, 487K rwdata, 2840K rodata, 290K init, 1399K bss, 35268K reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xd0800000 - 0xff000000   ( 744 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xd0000000   ( 256 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc09ba800   (9930 kB)
+[    0.000000]       .init : 0xc09bb000 - 0xc0a039fc   ( 291 kB)
+[    0.000000]       .data : 0xc0a04000 - 0xc0a7dcb0   ( 488 kB)
+[    0.000000]        .bss : 0xc0a7dcb0 - 0xc0bdba84   (1400 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] GIC CPU mask not found - kernel will fail to boot.
+[    0.000000] Architected mmio timer(s) running at 19.20MHz (virt).
+[    0.000000] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 3579139424256ns
+[    0.000000] Switching to timer-based delay loop
+[    0.000000] sched_clock: 32 bits at 19MHz, resolution 52ns, wraps every 223696213963ns
+[    0.000000] Console: colour dummy device 80x30
+[    0.000400] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000412] pid_max: default: 32768 minimum: 301
+[    0.000558] Mount-cache hash table entries: 512
+[    0.000954] Initializing cgroup subsys debug
+[    0.000968] Initializing cgroup subsys freezer
+[    0.000998] CPU: Testing write buffer coherency: ok
+[    0.001208] Setting up static identity map for 0xc06b9a20 - 0xc06b9a78
+[    0.002062] MSM Memory Dump base table set up
+[    0.002089] MSM Memory Dump apps data table set up
+[    0.009022] pinctrl core: initialized pinctrl subsystem
+[    0.009257] regulator-dummy: no parameters
+[    0.010048] NET: Registered protocol family 16
+[    0.011444] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.018714] spmi_pmic_arb 200f000.qcom,spmi: missing property: qcom,pmic-arb-max-peripherals
+[    0.018731] spmi_pmic_arb 200f000.qcom,spmi: PMIC Arb Version-2 0x20010000
+[    0.019057] spmi_pmic_arb 200f000.qcom,spmi: missing property: qcom,pmic-arb-max-periph-interrupts
+[    0.020711] msm_watchdog b017000.qcom,wdt: wdog absent resource not present
+[    0.020893] msm_watchdog b017000.qcom,wdt: MSM Watchdog Initialized
+[    0.024245] cma: Assigned CMA region at 81800000 to 4080000.qcom,mss device
+[    0.026878] gpiochip_find_base: found new base at 924
+[    0.026993] gpiochip_add: registered GPIOs 924 to 1023 on device: msm_tlmm_gpio
+[    0.027351] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.027361] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.027595] msm_mpm_dev_probe(): Cannot get clk resource for XO
+[    0.027617] platform 601d0.qcom,mpm: Driver mpm-v2 requests probe deferral
+[    0.027832] smd_open() before smd_init()
+[    0.027848] platform qcom,rpm-smd.21: Driver rpm-smd requests probe deferral
+[    0.028081] msm-jtag-fuse a601c.jtagfuse: JTag Fuse initialized
+[    0.029554] smd_channel_probe_now: allocation table not initialized
+[    0.031554] i2c-msm-v2 78b7000.i2c: probing driver i2c-msm-v2
+[    0.031611] i2c-msm-v2 78b7000.i2c: error on clk_get(core_clk):-517
+[    0.031623] i2c-msm-v2 78b7000.i2c: error probe() failed with err:-517
+[    0.031648] platform 78b7000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.032711] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,core-limit-temp. err=-22. KTM continues
+[    0.032726] msm-thermal qcom,msm-thermal.24: probe_freq_mitigation:Failed reading node=/soc/qcom,msm-thermal, key=qcom,freq-mitigation-temp. err=-22. KTM continues
+[    0.032741] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,rpm-phase-resource-type err=-22. KTM continues
+[    0.032755] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,gfx-sensor-id. err=-22. KTM continues
+[    0.032768] msm-thermal qcom,msm-thermal.24: probe_therm_reset:Failed reading node=/soc/qcom,msm-thermal, key=qcom,therm-reset-temp err=-22. KTM continues
+[    0.032815] msm_thermal:msm_thermal_dev_probe Failed reading node=/soc/qcom,msm-thermal, key=qcom,freq-control-mask. err:-517
+[    0.032832] platform qcom,msm-thermal.24: Driver msm-thermal requests probe deferral
+[    0.033428] sps:sps is ready.
+[    0.033834] platform b008018.qcom,a7pll: Driver msm-clock-controller requests probe deferral
+[    0.033962] platform 1800000.qcom,gcc: Driver msm-clock-controller requests probe deferral
+[    0.034308] platform b010008.qcom,clock-a7: Driver clock-a7 requests probe deferral
+[    0.034720] msm_mpm_dev_probe(): Cannot get clk resource for XO
+[    0.034740] platform 601d0.qcom,mpm: Driver mpm-v2 requests probe deferral
+[    0.035585] 9635_s1: 700 <--> 1100 mV at 700 mV normal idle 
+[    0.036055] 9635_s2: 1250 mV normal idle 
+[    0.036462] 9635_s3: 1025 mV normal idle 
+[    0.036833] 9635_s4: 1850 mV normal idle 
+[    0.037214] 9635_s5_level: 0 <--> 0 mV normal idle 
+[    0.037499] 9635_s5_level_ao: 0 <--> 0 mV normal idle 
+[    0.037781] 9635_s5_floor_level: 0 <--> 0 mV normal idle 
+[    0.038157] 9635_l1: 1225 <--> 1250 mV at 1225 mV normal idle 
+[    0.038541] 9635_l2: 1200 mV normal idle 
+[    0.038917] 9635_l3: 1000 mV normal idle 
+[    0.039310] 9635_l4: 1000 mV normal idle 
+[    0.039786] 9635_l5: 1800 mV normal idle 
+[    0.040185] 9635_l6: 1800 mV normal idle 
+[    0.040566] 9635_l7: 1800 mV normal idle 
+[    0.040976] 9635_l8: 1800 mV normal idle 
+[    0.041378] 9635_l9_level: 0 <--> 0 mV normal idle 
+[    0.041780] 9635_l10: 3200 mV normal idle 
+[    0.042185] 9635_l11: 1800 <--> 2850 mV at 1800 mV normal idle 
+[    0.042589] 9635_l12: 2700 mV normal idle 
+[    0.042993] 9635_l13: 1800 <--> 2850 mV at 1800 mV normal idle 
+[    0.043387] 9635_l14: 1800 <--> 2850 mV at 1800 mV normal idle 
+[    0.043794] 9635_l15: 1800 mV normal idle 
+[    0.044215] 9635_l16: 950 mV normal idle 
+[    0.044605] i2c-msm-v2 78b7000.i2c: probing driver i2c-msm-v2
+[    0.044664] i2c-msm-v2 78b7000.i2c: error on clk_get(core_clk):-517
+[    0.044675] i2c-msm-v2 78b7000.i2c: error probe() failed with err:-517
+[    0.044700] platform 78b7000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.044803] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,core-limit-temp. err=-22. KTM continues
+[    0.044817] msm-thermal qcom,msm-thermal.24: probe_freq_mitigation:Failed reading node=/soc/qcom,msm-thermal, key=qcom,freq-mitigation-temp. err=-22. KTM continues
+[    0.044832] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,rpm-phase-resource-type err=-22. KTM continues
+[    0.044845] msm-thermal qcom,msm-thermal.24: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,gfx-sensor-id. err=-22. KTM continues
+[    0.044858] msm-thermal qcom,msm-thermal.24: probe_therm_reset:Failed reading node=/soc/qcom,msm-thermal, key=qcom,therm-reset-temp err=-22. KTM continues
+[    0.044992] msm-thermal qcom,msm-thermal.24: probe_psm:Failed reading node=/soc/qcom,msm-thermal, key=qcom,pmic-sw-mode-temp. err=-22. KTM continues
+[    0.045327] msm-thermal qcom,msm-thermal.24: probe_ocr:Failed reading node=/soc/qcom,msm-thermal, key=qcom,pmic-opt-curr-temp err:-22. KTM continues
+[    0.045337] msm_thermal:get_kernel_cluster_info CPU0 topology not initialized.
+[    0.046372] msm-clock-controller b008018.qcom,a7pll: registered clocks
+[    0.055460] msm-clock-controller 1800000.qcom,gcc: registered clocks
+[    0.055758] clock-a7 b010008.qcom,clock-a7: No speed/PVS binning available. Defaulting to 0!
+[    0.056564] i2c-msm-v2 78b7000.i2c: probing driver i2c-msm-v2
+[    0.056629] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.056641] i2c-msm-v2 78b7000.i2c: msm_bus_scale_register_client(mstr-id:86):0 (not a problem)
+[    0.056981] i2c i2c-3: subin: addr=6b registering /soc/i2c@78b7000/hl7019-charger@6B
+[    0.057418] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.057611] i2c i2c-3: of_i2c_jrd_is_bq25601_charger ret 7
+[    0.057625] i2c i2c-3: subin:not bq addr=6b registering /soc/i2c@78b7000/hl7019-charger@6B
+[    0.057640] i2c i2c-3: subin: addr=6b registering /soc/i2c@78b7000/bq25601-charger@6B
+[    0.058072] i2c i2c-3: of_i2c_jrd_is_bq25601_charger ret 7
+[    0.058227] i2c i2c-3: of_i2c_jrd_is_bq25601_charger ret 7
+[    0.076286] bio: create slab <bio-0> at 0
+[    0.077008] KPI: Bootloader start count = 25254
+[    0.077017] KPI: Bootloader end count = 58592
+[    0.077024] KPI: Bootloader display count = 1644299408
+[    0.077030] KPI: Bootloader load kernel count = 23583
+[    0.077037] KPI: Kernel MPM timestamp = 69932
+[    0.077042] KPI: Kernel MPM Clock frequency = 32768
+[    0.077065] socinfo_print: v0.10, id=234, ver=2.0, raw_id=2385, raw_ver=1, hw_plat=0, hw_plat_ver=0
+[    0.077065]  accessory_chip=0, hw_plat_subtype=0, pmic_model=65544, pmic_die_revision=65537 foundry_id=1 serial_number=0000000000
+[    0.077433] of_get_named_gpio_flags: can't parse gpios property
+[    0.077548] ethernet_phy: no parameters
+[    0.077652] of_get_named_gpio_flags: can't parse gpios property
+[    0.077736] codec_2.15v: no parameters
+[    0.077847] of_get_named_gpio_flags: can't parse gpios property
+[    0.077932] wlan_vreg: no parameters
+[    0.078218] vgaarb: loaded
+[    0.078464] SCSI subsystem initialized
+[    0.078653] usbcore: registered new interface driver usbfs
+[    0.078711] usbcore: registered new interface driver hub
+[    0.078853] usbcore: registered new device driver usb
+[    0.079994] cma: Assigned CMA region at 0 to 1c.qcom,ion-heap device
+[    0.080268] ION heap system created
+[    0.080393] ION heap audio created at 0x8fc00000 with size af000
+[    0.080637] msm_bus_fabric_init_driver
+[    0.080796] msm_bus_device 580000.ad-hoc-bus: Dev 0
+[    0.080815] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.080826] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.080945] msm_bus_device 580000.ad-hoc-bus: msmbus_coresight initialized
+[    0.080973] msm_bus_device 580000.ad-hoc-bus: Dev 4096
+[    0.080987] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.080997] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.081019] msm_bus_device 580000.ad-hoc-bus: Coresight support absent for bus: 4096
+[    0.081046] msm_bus_device 580000.ad-hoc-bus: Dev 1024
+[    0.081061] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.081071] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.081173] msm_bus_device 580000.ad-hoc-bus: msmbus_coresight initialized
+[    0.082342] msm_bus_init_clk: Valid node clk node 0 ctx 0
+[    0.082352] msm_bus_init_clk: Valid node clk node 0 ctx 1msm_bus_init_clk: Valid node clk node 4096 ctx 0
+[    0.082448] msm_bus_init_clk: Valid node clk node 4096 ctx 1msm_bus_init_clk: Valid node clk node 1024 ctx 0
+[    0.082524] msm_bus_init_clk: Valid node clk node 1024 ctx 1<3>[    0.087194] ipa ipa_uc_state_check:265 uC interface not initialized
+[    0.089269] sps:BAM 0x07904000 is registered.
+[    0.089893] ipa ipa_uc_state_check:265 uC interface not initialized
+[    0.090092] sps:BAM 0x07904000 (va:0xd0ac0000) enabled: ver:0x26, number of pipes:20
+[    0.091860] ipa ipa_uc_state_check:265 uC interface not initialized
+[    0.092357] ipa ipa_uc_state_check:265 uC interface not initialized
+[    0.094451] IPA driver initialization was successful.
+[    0.094944] gdsc_pcie: no parameters
+[    0.095171] gdsc_usb30: no parameters
+[    0.095750] Advanced Linux Sound Architecture Driver Initialized.
+[    0.096248] Bluetooth: Core ver 2.16
+[    0.096287] NET: Registered protocol family 31
+[    0.096295] Bluetooth: HCI device and connection manager initialized
+[    0.096309] Bluetooth: HCI socket layer initialized
+[    0.096320] Bluetooth: L2CAP socket layer initialized
+[    0.096340] Bluetooth: SCO socket layer initialized
+[    0.096575] cfg80211: Calling CRDA to update world regulatory domain
+[    0.096604] cfg80211: World regulatory domain updated:
+[    0.096611] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[    0.096619] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[    0.096627] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[    0.096635] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[    0.096643] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.096651] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.096659] cfg80211:   (5490000 KHz - 5710000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.096667] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.096675] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[    0.096924] pcie:pcie_init.
+[    0.099966] msm_pcie_probe: PCIe: RC0 could not get pinctrl sleep state
+[    0.100963] Switching to clocksource arch_sys_counter
+[    0.119756] gpiod_set_debounce: gpio-1012 status -22
+[    0.120116] input: gpio-keys as /devices/gpio_keys.54/input/input0
+[    0.120557] platform qcom,pmu-battery.53: Driver pmu_battery requests probe deferral
+[    0.122478] NET: Registered protocol family 2
+[    0.122921] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.122957] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.122978] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.123025] TCP: reno registered
+[    0.123038] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.123054] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.123239] NET: Registered protocol family 1
+[    0.123270] PCI: CLS 0 bytes, default 64
+[    0.123276] load off-mode charge module
+[    0.123288] failed to get charge_mode, use default
+[    0.123294] charge_mode is 0x0
+[    0.123488] battery_core_init_property: read dt ibat-max =1024000
+[    0.123500] bat->params.chg_out.feature=0,en_gpio=0,plug_gpio=0,min_capity=0. 
+[    0.124116] battery_core_register: Battery Core Version 5.0.0(Built at 20151202-21:36)!
+[    0.124129] pmu_battery_probe: vbat_channel=21, tbat_channel=17
+[    0.132843] yaffs: yaffs built Apr 24 2022 18:41:09 Installing.
+[    0.132876] msgmni has been set to 463
+[    0.133679] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+[    0.133691] io scheduler noop registered
+[    0.133698] io scheduler deadline registered
+[    0.133713] io scheduler row registered
+[    0.133837] io scheduler cfq registered (default)
+[    0.133978] gpiochip_find_base: found new base at 920
+[    0.134074] gpiochip_add: registered GPIOs 920 to 923 on device: pmd9635-gpio
+[    0.134231] qcom,qpnp-pin qpnp-pin-ce4bf800: qpnp_pin_probe: gpio_chip registered between 920-923
+[    0.134469] gpiochip_find_base: found new base at 916
+[    0.134546] gpiochip_add: registered GPIOs 916 to 919 on device: pmd9635-mpp
+[    0.134790] qcom,qpnp-pin qpnp-pin-ce4bfa00: qpnp_pin_probe: gpio_chip registered between 916-919
+[    0.135026] gpiochip_find_base: found new base at 884
+[    0.135108] gpiochip_add: registered GPIOs 884 to 915 on device: smp2p
+[    0.135498] gpiochip_find_base: found new base at 852
+[    0.135574] gpiochip_add: registered GPIOs 852 to 883 on device: smp2p
+[    0.135606] gpiochip_find_base: found new base at 820
+[    0.135674] gpiochip_add: registered GPIOs 820 to 851 on device: smp2p
+[    0.136061] gpiochip_find_base: found new base at 788
+[    0.136131] gpiochip_add: registered GPIOs 788 to 819 on device: smp2p
+[    0.136163] gpiochip_find_base: found new base at 756
+[    0.136231] gpiochip_add: registered GPIOs 756 to 787 on device: slave-kernel
+[    0.136309] platform qcom,smp2pgpio-ssr-smp2p-1-in.8: Driver smp2pgpio requests probe deferral
+[    0.136340] gpiochip_find_base: found new base at 756
+[    0.136407] gpiochip_add: registered GPIOs 756 to 787 on device: master-kernel
+[    0.136466] platform qcom,smp2pgpio-ssr-smp2p-1-out.9: Driver smp2pgpio requests probe deferral
+[    0.138922] msm_rpm_log_probe: OK
+[    0.141333] of_get_named_gpio_flags exited with status -517
+[    0.141350] pil-q6v5-mss 4080000.qcom,mss: [modem]: Error getting proxy unvoting gpio
+[    0.141449] platform 4080000.qcom,mss: Driver pil-q6v5-mss requests probe deferral
+[    0.142700] msm_serial_hsl_probe: detected port #0 (ttyHSL0)
+[    0.142732] AXI: get_pdata(): Error: Client name not found
+[    0.142739] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    0.142746] msm_serial_hsl_probe: Bus scaling is disabled
+[    0.142838] 78b1000.serial: ttyHSL0 at MMIO 0x78b1000 (irq = 141) is a MSM
+[    0.142888] msm_hsl_console_setup: console setup on port #0
+[    1.692928] console [ttyHSL0] enabled
+[    1.696894] msm_serial_hsl_init: driver initialized
+[    1.709994] brd: module loaded
+[    1.714076] loop: module loaded
+[    1.717459] SCSI Media Changer driver v0.25 
+[    1.726764] sps: BAM device 0x07984000 is not registered yet.
+[    1.731765] sps:BAM 0x07984000 is registered.
+[    1.735645] msm_nand_bam_init: msm_nand_bam_init: BAM device registered: bam_handle 0xcdd55c00
+[    1.744735] sps:BAM 0x07984000 (va:0xd0ba0000) enabled: ver:0x18, number of pipes:7
+[    1.755033] msm_nand_parse_smem_ptable: Parsing partition table info from SMEM
+[    1.761299] msm_nand_parse_smem_ptable: SMEM partition table found: ver: 4 len: 16
+[    1.768784] msm_nand_version_check: nand_major:1, nand_minor:3, qpic_major:1, qpic_minor:1
+[    1.777083] msm_nand_scan: NAND Id: 0x1590aa98 Buswidth: 8Bits Density: 256 MByte
+[    1.784505] msm_nand_scan: pagesize: 2048 Erasesize: 131072 oobsize: 128 (in Bytes)
+[    1.792188] msm_nand_scan: BCH ECC: 8 Bit
+[    1.796117] msm_nand_scan: CFG0: 0x290408c0,           CFG1: 0x0804715c
+[    1.796117]             RAWCFG0: 0x2b8400c0,        RAWCFG1: 0x0005055d
+[    1.796117]           ECCBUFCFG: 0x00000203,      ECCBCHCFG: 0x42040d10
+[    1.796117]           RAWECCCFG: 0x42000d11, BAD BLOCK BYTE: 0x000001c5
+[    1.822529] Creating 16 MTD partitions on "7980000.nand":
+[    1.827884] 0x000000000000-0x000000140000 : "sbl"
+[    1.833174] 0x000000140000-0x000000280000 : "mibib"
+[    1.837929] 0x000000280000-0x000000d80000 : "efs2"
+[    1.842748] 0x000000d80000-0x000000e80000 : "tz"
+[    1.847337] 0x000000e80000-0x000000f80000 : "rpm"
+[    1.851975] 0x000000f80000-0x0000010c0000 : "aboot"
+[    1.856791] 0x0000010c0000-0x000001800000 : "boot"
+[    1.861618] 0x000001800000-0x000004c40000 : "modem"
+[    1.866448] 0x000004c40000-0x000004e40000 : "rfbackup"
+[    1.871625] 0x000004e40000-0x000005e80000 : "recoveryfs"
+[    1.876898] 0x000005e80000-0x000006000000 : "misc"
+[    1.881717] 0x000006000000-0x000006740000 : "recovery"
+[    1.886802] 0x000006740000-0x000009e80000 : "cache"
+[    1.891700] 0x000009e80000-0x00000ae80000 : "cdrom"
+[    1.896472] 0x00000ae80000-0x00000c0c0000 : "jrdresource"
+[    1.901892] 0x00000c0c0000-0x000010000000 : "system"
+[    1.906808] msm_nand_probe: NANDc phys addr 0x7980000, BAM phys addr 0x7984000, BAM IRQ 279
+[    1.914719] msm_nand_probe: Allocated DMA buffer at virt_addr 0xcec48000, phys_addr 0x8ec48000
+[    1.924734] of_get_named_gpio_flags: can't parse gpios property
+[    1.924747] of_get_named_gpio_flags: can't parse gpios property
+[    1.924754] of_get_named_gpio_flags: can't parse gpios property
+[    1.924760] of_get_named_gpio_flags: can't parse gpios property
+[    1.924767] of_get_named_gpio_flags: can't parse gpios property
+[    1.924851] of_get_named_gpio_flags: can't parse gpios property
+[    1.924860] of_get_named_gpio_flags: can't parse gpios property
+[    1.925955] PPP generic driver version 2.4.2
+[    1.940600] msm_pcie_enable: PCIe: Assert the reset of endpoint of RC0.
+[    1.949986] msm_pcie_enable: PCIe RC0 PHY is ready!
+[    1.963883] msm_pcie_enable: PCIe: Release the reset of endpoint of RC0.
+[    2.011600] msm_pcie_enable: PCIe RC0 link initialized
+[    2.015957] PCI host bridge to bus 0000:00
+[    2.019783] pci_bus 0000:00: root bus resource [io  0x40200000-0x402fffff]
+[    2.026661] pci_bus 0000:00: root bus resource [mem 0x40300000-0x40ffffff]
+[    2.033510] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    2.041575] pci 0000:00:00.0: [17cb:0301] type 01 class 0x060400
+[    2.041689] msm_pcie_oper_conf: Read of RC0 0:0x00 + 0x0014[4] is all FFs
+[    2.048180] pci 0000:00:00.0: reg 10: [mem 0x00000000-0x00000fff 64bit]
+[    2.048531] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    2.048958] PCI: bus0: Fast back to back transfers disabled
+[    2.053758] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    2.062185] pci 0000:01:00.0: [168c:003e] type 00 class 0x028000
+[    2.062317] msm_pcie_oper_conf: Read of RC0 1:0x00 + 0x0014[4] is all FFs
+[    2.068492] pci 0000:01:00.0: reg 10: [mem 0x00000000-0x001fffff 64bit]
+[    2.069124] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[    2.069897] PCI: bus1: Fast back to back transfers disabled
+[    2.074461] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    2.074530] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 01
+[    2.074738] msm_pcie_oper_conf: Read of RC0 0:0x00 + 0x0028[4] is all FFs
+[    2.081245] pci 0000:00:00.0: BAR 8: assigned [mem 0x40400000-0x405fffff]
+[    2.087971] pci 0000:00:00.0: BAR 0: assigned [mem 0x40300000-0x40300fff 64bit]
+[    2.095377] pci 0000:01:00.0: BAR 0: assigned [mem 0x40400000-0x405fffff 64bit]
+[    2.102927] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    2.107562] pci 0000:00:00.0:   bridge window [mem 0x40400000-0x405fffff]
+[    2.114389] PCI: enabling device 0000:00:00.0 (0140 -> 0143)
+[    2.133582] msm_pcie_disable: PCIe: Assert the reset of endpoint of RC0.
+[    2.142089] pcie_pipe_clk
+[    2.143667] pcie_pipe_clk_src
+[    2.146620]             CMD_RCGR: 0x00000000
+[    2.150873]             CFG_RCGR: 0x00000200
+[    2.155124] gcc_pcie_pipe_clk
+[    2.158078]                 CBCR: 0x00004ff0
+[    2.162328] ------------[ cut here ]------------
+[    2.166944] WARNING: at /home/jianrong.wei/build_project/EE71/MDM9640/mdm9640-le-3-0_amss_standard_oem.git/apps_proc/kernel/drivers/clk/qcom/clock-local2.c:413 branch_clk_halt_check+0xd0/0xf8()
+[    2.184119] gcc_pcie_pipe_clk: status stuck on
+[    2.188372] Modules linked in:
+[    2.191587] CPU: 0 PID: 1 Comm: swapper Not tainted 3.10.49 #1
+[    2.197416] [<c001438c>] (unwind_backtrace+0x0/0xe0) from [<c0011894>] (show_stack+0x10/0x14)
+[    2.205918] [<c0011894>] (show_stack+0x10/0x14) from [<c0021ba8>] (warn_slowpath_common+0x4c/0x68)
+[    2.214858] [<c0021ba8>] (warn_slowpath_common+0x4c/0x68) from [<c0021bf0>] (warn_slowpath_fmt+0x2c/0x3c)
+[    2.224406] [<c0021bf0>] (warn_slowpath_fmt+0x2c/0x3c) from [<c04b202c>] (branch_clk_halt_check+0xd0/0xf8)
+[    2.234043] [<c04b202c>] (branch_clk_halt_check+0xd0/0xf8) from [<c04b2840>] (branch_clk_disable+0x8c/0xb4)
+[    2.243763] [<c04b2840>] (branch_clk_disable+0x8c/0xb4) from [<c04af748>] (clk_disable+0xb0/0x174)
+[    2.252704] [<c04af748>] (clk_disable+0xb0/0x174) from [<c0244868>] (msm_pcie_pipe_clk_deinit+0x80/0xa8)
+[    2.262165] [<c0244868>] (msm_pcie_pipe_clk_deinit+0x80/0xa8) from [<c024b39c>] (msm_pcie_disable+0x1dc/0x220)
+[    2.272148] [<c024b39c>] (msm_pcie_disable+0x1dc/0x220) from [<c024b854>] (msm_pcie_pm_suspend.isra.15+0x474/0x524)
+[    2.282562] [<c024b854>] (msm_pcie_pm_suspend.isra.15+0x474/0x524) from [<c024c0d8>] (msm_pcie_pm_control+0x59c/0xbf4)
+[    2.293244] [<c024c0d8>] (msm_pcie_pm_control+0x59c/0xbf4) from [<c033da14>] (cnss_wlan_pci_probe+0xe8/0x2a8)
+[    2.303139] [<c033da14>] (cnss_wlan_pci_probe+0xe8/0x2a8) from [<c0239494>] (pci_device_probe+0x68/0xa8)
+[    2.312604] [<c0239494>] (pci_device_probe+0x68/0xa8) from [<c02ca320>] (driver_probe_device+0xb4/0x1fc)
+[    2.322063] [<c02ca320>] (driver_probe_device+0xb4/0x1fc) from [<c02ca514>] (__driver_attach+0x68/0x8c)
+[    2.331435] [<c02ca514>] (__driver_attach+0x68/0x8c) from [<c02c8a94>] (bus_for_each_dev+0x70/0x84)
+[    2.340463] [<c02c8a94>] (bus_for_each_dev+0x70/0x84) from [<c02c9a90>] (bus_add_driver+0xdc/0x218)
+[    2.349492] [<c02c9a90>] (bus_add_driver+0xdc/0x218) from [<c02caa80>] (driver_register+0x9c/0x124)
+[    2.358518] [<c02caa80>] (driver_register+0x9c/0x124) from [<c033cfd4>] (cnss_probe+0x764/0xb90)
+[    2.367289] [<c033cfd4>] (cnss_probe+0x764/0xb90) from [<c02cb450>] (platform_drv_probe+0x14/0x18)
+[    2.376229] [<c02cb450>] (platform_drv_probe+0x14/0x18) from [<c02ca320>] (driver_probe_device+0xb4/0x1fc)
+[    2.385864] [<c02ca320>] (driver_probe_device+0xb4/0x1fc) from [<c02ca514>] (__driver_attach+0x68/0x8c)
+[    2.395237] [<c02ca514>] (__driver_attach+0x68/0x8c) from [<c02c8a94>] (bus_for_each_dev+0x70/0x84)
+[    2.404265] [<c02c8a94>] (bus_for_each_dev+0x70/0x84) from [<c02c9a90>] (bus_add_driver+0xdc/0x218)
+[    2.413294] [<c02c9a90>] (bus_add_driver+0xdc/0x218) from [<c02caa80>] (driver_register+0x9c/0x124)
+[    2.422322] [<c02caa80>] (driver_register+0x9c/0x124) from [<c00087ac>] (do_one_initcall+0x8c/0x12c)
+[    2.431438] [<c00087ac>] (do_one_initcall+0x8c/0x12c) from [<c09bbaf8>] (kernel_init_freeable+0xf4/0x1b4)
+[    2.440988] [<c09bbaf8>] (kernel_init_freeable+0xf4/0x1b4) from [<c06a8ce0>] (kernel_init+0x8/0xfc)
+[    2.450014] [<c06a8ce0>] (kernel_init+0x8/0xfc) from [<c000dc98>] (ret_from_fork+0x14/0x3c)
+[    2.458365] ---[ end trace 3ff8d65e9f16f9c2 ]---
+[    2.464169] cnss: Platform driver probed successfully.
+[    2.468533] usbcore: registered new interface driver asix
+[    2.473749] usbcore: registered new interface driver ax88179_178a
+[    2.479763] usbcore: registered new interface driver cdc_ether
+[    2.485619] usbcore: registered new interface driver smsc75xx
+[    2.491339] usbcore: registered new interface driver smsc95xx
+[    2.497032] usbcore: registered new interface driver net1080
+[    2.502695] usbcore: registered new interface driver cdc_subset
+[    2.508585] usbcore: registered new interface driver zaurus
+[    2.514347] usbcore: registered new interface driver cdc_ncm
+[    2.520190] NET: Registered protocol family 27
+[    2.527697] msm_sharedmem: sharedmem_register_qmi: qmi init successful
+[    2.533745] of_get_named_gpio_flags: can't parse gpios property
+[    2.533763] msm-dwc3 8a00000.ssusb: unable to read platform data tx fifo size
+[    2.542692] usbcore: registered new interface driver usb-storage
+[    2.547694] usbcore: registered new interface driver ums-alauda
+[    2.553652] usbcore: registered new interface driver ums-cypress
+[    2.559581] usbcore: registered new interface driver ums-datafab
+[    2.565595] usbcore: registered new interface driver ums-freecom
+[    2.571582] usbcore: registered new interface driver ums-isd200
+[    2.577473] usbcore: registered new interface driver ums-jumpshot
+[    2.583562] usbcore: registered new interface driver ums-karma
+[    2.589355] usbcore: registered new interface driver ums-onetouch
+[    2.595451] usbcore: registered new interface driver ums-sddr09
+[    2.601360] usbcore: registered new interface driver ums-sddr55
+[    2.607237] usbcore: registered new interface driver ums-usbat
+[    2.614352] qcom,qpnp-rtc qpnp-rtc-ce4bfc00: rtc core: registered qpnp_rtc as rtc0
+[    2.621412] i2c /dev entries driver
+[    2.625104] unable to find DT imem DLOAD mode node
+[    2.629482] unable to find DT imem EDLOAD mode node
+[    2.635664]  bq25601_probe 
+[    2.637679] i2c-msm-v2 78b7000.i2c: msm_bus_scale_register_client(mstr-id:86):0x7 (ok)
+[    2.646039] bq25601-charger 3-006b: bq25601_read_mask val:7
+[    2.651277] bq25601_otg_vreg: no parameters
+[    2.655172] charger_core_register: Charger Core Version 5.0.0(Built at 20151202-21:36)!
+[    2.683364] battery_core_measure_temperature: battery OFFLINE, health:1  with 25C,ibat:0,ibat_max:1024000, 
+[    2.716881] charger_core_set_charging_current: cyan adapter->usb.current_now = 0 !
+[    2.731001] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    2.737438] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    2.760999] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    2.766654] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    2.790999] charger_core_set_charging_current: cyan mA = 0 !
+[    2.795778] cyan mA = 0, bdi->ichrg_limit = 1024
+[    2.800214] cyan bdi->current_limit_ma = 0
+[    2.811430] cyan r2v = 80
+[    2.818490] battery_core_check_temperature_threshold: now temp = 25 ,high_temp_value = 45,high_temp_vbat = 4100, reset_voltage_temp = 3 ,fast_charge_low_temp = 15,fast_charge_current = 600
+[    2.834287] battery_core_check_temperature_threshold: bat->props.state = 2 
+[    2.841236] battery_core_check_temperature_threshold: bat->props.fast_temp_charge_state = 0 
+[    2.849632] battery_core_check_temperature_threshold: temperature is normal ,do nothing
+[    2.860344] bq25601-charger 3-006b: bq25601 probe enter5
+[    2.864965] bq25601-charger 3-006b: power_good is 1,vbus_stat is 1
+[    2.872424] charger_core_set_charging_current: cyan adapter->usb.current_now = 0 !
+[    2.879446] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    2.886544] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    2.894517] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    2.901472] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    2.908484] charger_core_set_charging_current: cyan mA = 0 !
+[    2.914050] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    2.920769] cyan mA = 0, bdi->ichrg_limit = 1024
+[    2.924480] cyan bdi->current_limit_ma = 0
+[    2.929377] Bluetooth: HCI UART driver ver 2.2
+[    2.932942] Bluetooth: HCI H4 protocol initialized
+[    2.937722] Bluetooth: HCI_IBS protocol initialized
+[    2.942637] cyan r2v = 80
+[    2.951235] bt_dt_parse_vreg_info: qca,bt-vdd-io: is not provided in device tree
+[    2.957588] bt_dt_parse_vreg_info: qca,bt-vdd-xtal: is not provided in device tree
+[    2.976833] bt_power bt_qca6174.17: no qca,bt-vdd-pa-voltage-level property
+[    2.989215] msm-usb-ssphy-qmp 78000.ssphy: QMP PHY initialization timeout
+[    2.994985] bt_dt_parse_vreg_info: qca,bt-vdd-ldo: is not provided in device tree
+[    3.002453] msm-usb-ssphy-qmp 78000.ssphy: USB3_PHY_PCS_STATUS:68686868
+[    3.009034] bt_dt_parse_vreg_info: qca,bt-chip-pwd: is not provided in device tree
+[    3.017138] cpuidle: using governor ladder
+[    3.020690] cpuidle: using governor menu
+[    3.024637] sdhci: Secure Digital Host Controller Interface driver
+[    3.030871] sdhci: Copyright(c) Pierre Ossman
+[    3.035115] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.041232] of_get_named_gpio_flags: can't parse gpios property
+[    3.043500] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    3.049600] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    3.091050] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    3.097407] usbcore: registered new interface driver usbhid
+[    3.102644] usbhid: USB HID core driver
+[    3.107176] sps:BAM 0x08b04000 is registered.
+[    3.110871] qcom,qpnp-power-on qpnp-power-on-ce4bf600: PMIC@SID0 Power-on reason: Triggered from PON1 (secondary PMIC) and 'cold' boot
+[    3.122903] qcom,qpnp-power-on qpnp-power-on-ce4bf600: PMIC@SID0: Unknown power-off reason
+[    3.131317] input: qpnp_pon as /devices/virtual/input/input1
+[    3.137201] PMIC@SID0: PMD9635 v1.1 options: 3, 2, 2, 2
+[    3.142279] ****************qpnp_usbdetect_probe 
+[    3.146748] ****************qpnp_usbdetect_vbus_irq vbus state:1
+[    3.152667] ****************qpnp_usb_detect_work vbus state:1
+[    3.158359] charger_core_set_charging_current: cyan adapter->usb.current_now = 0 !
+[    3.166463] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    3.173497] devfreq qcom,cpubw.20: Couldn't update frequency transition information.
+[    3.181113] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    3.189070] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    3.196384] coresight-fuse a601c.fuse: Fuse initialized
+[    3.201506] coresight-cti 810000.cti: CTI initialized
+[    3.206144] coresight-cti 811000.cti: CTI initialized
+[    3.211086] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    3.217976] charger_core_set_charging_current: cyan mA = 0 !
+[    3.223791] coresight-cti 812000.cti: CTI initialized
+[    3.228799] coresight-cti 813000.cti: CTI initialized
+[    3.233918] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    3.239955] coresight-cti 814000.cti: CTI initialized
+[    3.244986] cyan mA = 0, bdi->ichrg_limit = 1024
+[    3.249401] cyan bdi->current_limit_ma = 0
+[    3.253624] coresight-cti 815000.cti: CTI initialized
+[    3.258658] coresight-cti 816000.cti: CTI initialized
+[    3.263920] coresight-cti 817000.cti: CTI initialized
+[    3.268611] cyan r2v = 80
+[    3.271431] coresight-cti 818000.cti: CTI initialized
+[    3.276380] coresight-cti 843000.cti: CTI initialized
+[    3.281664] coresight-cti 838000.cti: CTI initialized
+[    3.286441] coresight-cti 83c000.cti: CTI initialized
+[    3.291755] coresight-csr 801000.csr: CSR initialized
+[    3.296775] coresight-tmc 826000.tmc: Byte Counter feature enabled
+[    3.302799] sps:BAM 0x00884000 is registered.
+[    3.306900] coresight-tmc 826000.tmc: TMC initialized
+[    3.312234] coresight-tmc 825000.tmc: TMC initialized
+[    3.317441] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    3.324690] coresight-funnel 821000.funnel: FUNNEL initialized
+[    3.330386] coresight-replicator 824000.replicator: REPLICATOR initialized
+[    3.337361] coresight-stm 802000.stm: STM initialized
+[    3.342311] coresight-hwevent 86c000.hwevent: Hardware Event driver initialized
+[    3.349678] coresight-etm 842000.etm: ETM initialized
+[    3.354909] coresight-modem-etm modem_etm0.13: Modem ETM initialized
+[    3.361192] coresight-rpm-etm rpm_etm0.12: RPM ETM initialized
+[    3.366823] platform 1941000.qpdi: Driver coresight-qpdi requests probe deferral
+[    3.378815] msm-compr-dsp qcom,msm-compr-dsp.34: msm_compr_probe: dev name qcom,msm-compr-dsp.34
+[    3.387326] platform qcom,msm-voip-dsp.35: Driver msm-voip-dsp requests probe deferral
+[    3.394741] platform qcom,msm-pcm-voice.36: Driver msm-pcm-voice requests probe deferral
+[    3.403205] msm_pcm_probe: dev name qcom,msm-voice-host-pcm.41
+[    3.411735] mdm9640-asoc-tomtom sound.28: Defering mdm9640_asoc_machine_probe, q6_modem_state 0
+[    3.419407] platform sound.28: Driver mdm9640-asoc-tomtom requests probe deferral
+[    3.427131] Netfilter messages via NETLINK v0.30.
+[    3.431642] nf_conntrack version 0.5.0 (3704 buckets, 14816 max)
+[    3.437844] ctnetlink v0.93: registering with nfnetlink.
+[    3.442951] ip_set: protocol 6
+[    3.446145] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.451330] TCP: cubic registered
+[    3.454951] NET: Registered protocol family 10
+[    3.459483] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    3.464439] sit: IPv6 over IPv4 tunneling driver
+[    3.469348] NET: Registered protocol family 17
+[    3.473418] Bridge firewalling registered
+[    3.477299] Ebtables v2.0 registered
+[    3.481183] Bluetooth: RFCOMM TTY layer initialized
+[    3.485736] Bluetooth: RFCOMM socket layer initialized
+[    3.490837] Bluetooth: RFCOMM ver 1.11
+[    3.494598] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    3.499863] Bluetooth: BNEP filters: protocol multicast
+[    3.505098] Bluetooth: BNEP socket layer initialized
+[    3.510018] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.515946] Bluetooth: HIDP socket layer initialized
+[    3.521052] gpiochip_find_base: found new base at 756
+[    3.521166] gpiochip_add: registered GPIOs 756 to 787 on device: slave-kernel
+[    3.521700] gpiochip_find_base: found new base at 724
+[    3.521786] gpiochip_add: registered GPIOs 724 to 755 on device: master-kernel
+[    3.523813] of_get_named_gpio_flags: can't parse gpios property
+[    3.525968] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    3.532108] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    3.571053] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    3.577436] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    3.584660] platform 1941000.qpdi: Driver coresight-qpdi requests probe deferral
+[    3.592626] mdm9640-asoc-tomtom sound.28: Defering mdm9640_asoc_machine_probe, q6_modem_state 0
+[    3.600422] platform sound.28: Driver mdm9640-asoc-tomtom requests probe deferral
+[    3.608304] of_get_named_gpio_flags: can't parse gpios property
+[    3.610479] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    3.616618] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    3.661050] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    3.667410] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    3.674655] platform 1941000.qpdi: Driver coresight-qpdi requests probe deferral
+[    3.682278] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    3.692492] codec_2.15v: disabling
+[    3.694875] regulator-dummy: disabling
+[    3.699182] mdm9640-asoc-tomtom sound.28: Defering mdm9640_asoc_machine_probe, q6_modem_state 0
+[    3.707349] platform sound.28: Driver mdm9640-asoc-tomtom requests probe deferral
+[    3.715187] of_get_named_gpio_flags: can't parse gpios property
+[    3.717364] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    3.723503] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    3.771048] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    3.777429] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    3.784662] platform 1941000.qpdi: Driver coresight-qpdi requests probe deferral
+[    3.791982] UBI-0: ubi_attach_mtd_dev:attaching mtd9 to ubi0
+[    3.863598] UBI-0: scan_all:scanning is finished
+[    3.872198] UBI-0 warning: print_rsvd_warning: cannot reserve enough PEBs for bad PEB handling, reserved 7, need 39
+[    3.881979] UBI-0: ubi_attach_mtd_dev:attached mtd9 (name "recoveryfs", size 16 MiB)
+[    3.889316] UBI-0: ubi_attach_mtd_dev:PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    3.897939] UBI-0: ubi_attach_mtd_dev:min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    3.906436] UBI-0: ubi_attach_mtd_dev:VID header offset: 2048 (aligned 2048), data offset: 4096
+[    3.915115] UBI-0: ubi_attach_mtd_dev:good PEBs: 129, bad PEBs: 1, corrupted PEBs: 0
+[    3.922840] UBI-0: ubi_attach_mtd_dev:user volume: 1, internal volumes: 1, max. volumes count: 128
+[    3.931784] UBI-0: ubi_attach_mtd_dev:max/mean erase counter: 16/4, WL threshold: 4096, image sequence number: 303301672
+[    3.942632] UBI-0: ubi_attach_mtd_dev:available PEBs: 0, total reserved PEBs: 129, PEBs reserved for bad PEB handling: 7
+[    3.953493] UBI-0: ubi_thread:background thread "ubi_bgt0d" started, PID 97
+[    3.960421] RNDIS_IPA module is loaded.
+[    3.964517] android_bind: android_bind(): jrd_usb android_bind cdev: 0xCD96F000, name: dwc3-gadget
+[    3.973275] file system registered
+[    3.976605] mbim_init: initialize 1 instances
+[    3.980954] mbim_init: Initialized 1 ports
+[    3.985068] mbim_bam_setup: no_ports:1
+[    3.988834] mbim_bam_setup: Initialized 1 ports
+[    3.994270] rndis_qc_init: initialize rndis QC instance
+[    3.998894] jrd_usb device_desc.bcdDevice: [0x0242]
+[    4.003357] android_bind scheduled jrd_usb start work: name: dwc3-gadget
+[    4.010003] android_usb gadget: android_usb ready
+[    4.015342] mdm9640-asoc-tomtom sound.28: Defering mdm9640_asoc_machine_probe, q6_modem_state 0
+[    4.023714] qcom,qpnp-rtc qpnp-rtc-ce4bfc00: setting system clock to 1970-01-01 00:00:06 UTC (6)
+[    4.032186] platform sound.28: Driver mdm9640-asoc-tomtom requests probe deferral
+[    4.040067] of_get_named_gpio_flags: can't parse gpios property
+[    4.041822] msm_thermal:interrupt_mode_init Interrupt mode init
+[    4.047966] parse_cluster_params(): Ignoring cluster params
+[    4.052863] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    4.059537] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    4.066564] /soc/qcom,lpm-levels/qcom,pm-cluster@0: No CPU phandle, assuming single cluster
+[    4.074856] android_usb gadget: Number of LUNs=1
+[    4.079411]  lun0: LUN: removable file: (no medium)
+[    4.084314] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    4.090798] jrd_usb_enable: android_usb: already disabled
+[    4.095930] jrd_usb_config config_tab_size: 15
+[    4.100340] jrd_usb_config i: 1
+[    4.103494] jrd_usb_config func_id: 18, index: 0
+[    4.108059] jrd_usb_config,name: mass_storage
+[    4.112426] jrd_usb_config func_id: -1, index: 1
+[    4.116992] jrd_usb_config func_id: -1, index: 2
+[    4.121728] jrd_usb_config func_id: -1, index: 3
+[    4.126107] jrd_usb_config func_id: -1, index: 4
+[    4.130709] jrd_usb_config func_id: -1, index: 5
+[    4.135334] jrd_usb_config func_id: -1, index: 6
+[    4.139910] jrd_usb_config func_id: -1, index: 7
+[    4.144551] jrd_usb_enable: jrd_usb_enable:disable_depth:1
+[    4.150012] the dwc->b_suspend is 0
+[    4.154965] rmnet_ipa started initialization
+[    4.158197] IPA SSR support = False
+[    4.161806] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    4.169106] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    4.176167] IPA ipa-loaduC = False
+[    4.183469] rmnet_ipa completed initialization
+[    4.187547] clock_late_init: Removing enables held for handed-off clocks
+[    4.194044] platform 1941000.qpdi: Driver coresight-qpdi requests probe deferral
+[    4.201504] mdm9640-asoc-tomtom sound.28: Defering mdm9640_asoc_machine_probe, q6_modem_state 0
+[    4.209628] platform sound.28: Driver mdm9640-asoc-tomtom requests probe deferral
+[    4.218005] of_get_named_gpio_flags: can't parse gpios property
+[    4.218715] ALSA device list:
+[    4.220642]   No soundcards found.
+[    4.225958] sdhci_msm_vreg_init_reg: devm_regulator_get(vdd) failed. ret=-517
+[    4.232100] sdhci_msm 7824900.sdhci: Regulator setup failed (-517)
+[    4.261114] platform 7824900.sdhci: Driver sdhci_msm requests probe deferral
+[    4.268487] platform 820000.tpiu: Driver coresight-tpiu requests probe deferral
+[    4.281057] UBIFS-0: background thread "ubifs_bgt0_0" started, PID 110
+[    4.309484] UBIFS-0: recovery needed
+[    4.454391] UBIFS-0: recovery completed
+[    4.457265] UBIFS-0: mounted UBI, volume 0, name "rootfs"
+[    4.462599] UBIFS-0: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    4.471905] the dwc->b_suspend is 0
+[    4.475443] UBIFS-0: FS size: 13713408 bytes (13 MiB, 108 LEBs), journal size 2605056 bytes (2 MiB, 21 LEBs)
+[    4.485202] UBIFS-0: reserved for root: 0 bytes (0 KiB)
+[    4.490353] UBIFS-0: media format: w4/r0 (latest is w4/r0), UUID 5C4B4E81-0DDF-412A-8C94-BD979B3FB455, small LPT model
+[    4.502365] VFS: Mounted root (ubifs filesystem) on device 0:11.
+[    4.507576] Freeing unused kernel memory: 288K (c09bb000 - c0a03000)
+[    4.516437] android_work: android_work: sent uevent USB_STATE=CONNECTED
+[    4.527492] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[    4.533295] msm-dwc3 8a00000.ssusb: Avail curr from USB = 500
+[    4.539141] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[    4.546784] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    4.561031] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    4.567995] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    4.591036] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    4.596958] charger_core_set_charging_current: cyan mA = 0 !
+[    4.621259] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    4.631168] cyan mA = 0, bdi->ichrg_limit = 1024
+[    4.634742] cyan bdi->current_limit_ma = 0
+[    4.651343] cyan r2v = 80
+[    4.681055] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[    4.861090] bq25601-charger 3-006b: Warning: USB TYPE POWER_SUPPLY_TYPE_USB
+[    4.868711] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[    4.875596] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    4.889743] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    4.901380] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    4.908346] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    4.926204] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    4.936025] charger_core_set_charging_current: cyan mA = 0 !
+[    4.946135] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    4.961414] cyan mA = 0, bdi->ichrg_limit = 1024
+[    4.964994] cyan bdi->current_limit_ma = 0
+[    4.981462] cyan r2v = 80
+[    4.991359] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[    4.998067] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    5.021174] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    5.028142] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    5.041064] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    5.046987] charger_core_set_charging_current: cyan mA = 0 !
+[    5.071378] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    5.081282] cyan mA = 0, bdi->ichrg_limit = 1024
+[    5.084861] cyan bdi->current_limit_ma = 0
+[    5.101408] cyan r2v = 80
+[    5.610460] UBI-1: ubi_attach_mtd_dev:attaching mtd15 to ubi1
+[    5.873799] UBI-1: scan_all:scanning is finished
+[    5.891410] UBI-1: ubi_attach_mtd_dev:attached mtd15 (name "system", size 63 MiB)
+[    5.897858] UBI-1: ubi_attach_mtd_dev:PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    5.912049] UBI-1: ubi_attach_mtd_dev:min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    5.919536] UBI-1: ubi_attach_mtd_dev:VID header offset: 2048 (aligned 2048), data offset: 4096
+[    5.928387] UBI-1: ubi_attach_mtd_dev:good PEBs: 505, bad PEBs: 1, corrupted PEBs: 0
+[    5.936018] UBI-1: ubi_attach_mtd_dev:user volume: 2, internal volumes: 1, max. volumes count: 128
+[    5.944925] UBI-1: ubi_attach_mtd_dev:max/mean erase counter: 28/6, WL threshold: 4096, image sequence number: 35657280
+[    5.955674] UBI-1: ubi_attach_mtd_dev:available PEBs: 0, total reserved PEBs: 505, PEBs reserved for bad PEB handling: 39
+[    5.966614] UBI-1: ubi_thread:background thread "ubi_bgt1d" started, PID 261
+[    6.002746] UBIFS-1: background thread "ubifs_bgt1_0" started, PID 269
+[    6.040694] UBIFS-1: recovery needed
+[    6.168020] UBIFS-1: recovery completed
+[    6.170880] UBIFS-1: mounted UBI, volume 0, name "rootfs"
+[    6.176232] UBIFS-1: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    6.185507] UBIFS-1: FS size: 19808256 bytes (18 MiB, 156 LEBs), journal size 2605056 bytes (2 MiB, 21 LEBs)
+[    6.195313] UBIFS-1: reserved for root: 0 bytes (0 KiB)
+[    6.200511] UBIFS-1: media format: w4/r0 (latest is w4/r0), UUID 4EBE51B1-DAC8-4248-9790-0A88277C07C5, small LPT model
+[    6.232403] UBIFS-1: background thread "ubifs_bgt1_1" started, PID 281
+[    6.267588] UBIFS-1: recovery needed
+[    6.404462] UBIFS-1: recovery completed
+[    6.407323] UBIFS-1: mounted UBI, volume 1, name "usrfs"
+[    6.412585] UBIFS-1: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    6.421866] UBIFS-1: FS size: 36315136 bytes (34 MiB, 286 LEBs), journal size 2605056 bytes (2 MiB, 21 LEBs)
+[    6.431669] UBIFS-1: reserved for root: 0 bytes (0 KiB)
+[    6.436865] UBIFS-1: media format: w4/r0 (latest is w4/r0), UUID 2B4DF443-A251-49F0-A5AE-059D539A54C7, small LPT model
+[    6.457841] UBI-2: ubi_attach_mtd_dev:attaching mtd7 to ubi2
+[    6.668325] UBI-2: scan_all:scanning is finished
+[    6.677117] UBI-2 warning: print_rsvd_warning: cannot reserve enough PEBs for bad PEB handling, reserved 8, need 40
+[    6.691379] UBI-2: ubi_attach_mtd_dev:attached mtd7 (name "modem", size 52 MiB)
+[    6.697651] UBI-2: ubi_attach_mtd_dev:PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    6.711129] UBI-2: ubi_attach_mtd_dev:min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    6.718616] UBI-2: ubi_attach_mtd_dev:VID header offset: 2048 (aligned 2048), data offset: 4096
+[    6.727423] UBI-2: ubi_attach_mtd_dev:good PEBs: 418, bad PEBs: 0, corrupted PEBs: 0
+[    6.735071] UBI-2: ubi_attach_mtd_dev:user volume: 1, internal volumes: 1, max. volumes count: 128
+[    6.744000] UBI-2: ubi_attach_mtd_dev:max/mean erase counter: 6/1, WL threshold: 4096, image sequence number: 1328192
+[    6.754575] UBI-2: ubi_attach_mtd_dev:available PEBs: 0, total reserved PEBs: 418, PEBs reserved for bad PEB handling: 8
+[    6.765430] UBI-2: ubi_thread:background thread "ubi_bgt2d" started, PID 290
+[    6.801428] UBIFS-2: background thread "ubifs_bgt2_0" started, PID 306
+[    6.837407] UBIFS-2: recovery needed
+[    6.928997] UBIFS-2: recovery completed
+[    6.931885] UBIFS-2: mounted UBI, volume 0, name "modem"
+[    6.937094] UBIFS-2: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    6.946406] UBIFS-2: FS size: 50282496 bytes (47 MiB, 396 LEBs), journal size 2605056 bytes (2 MiB, 21 LEBs)
+[    6.956204] UBIFS-2: reserved for root: 0 bytes (0 KiB)
+[    6.961420] UBIFS-2: media format: w4/r0 (latest is w4/r0), UUID 6DD3EEEC-4AFD-4D65-8F3A-34C6A4DDE2E6, small LPT model
+[    6.982622] UBI-3: ubi_attach_mtd_dev:attaching mtd12 to ubi3
+[    7.211219] UBI-3: scan_all:scanning is finished
+[    7.219980] UBI-3 warning: print_rsvd_warning: cannot reserve enough PEBs for bad PEB handling, reserved 8, need 40
+[    7.234552] UBI-3: ubi_attach_mtd_dev:attached mtd12 (name "cache", size 55 MiB)
+[    7.240912] UBI-3: ubi_attach_mtd_dev:PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    7.253701] UBI-3: ubi_attach_mtd_dev:min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    7.261316] UBI-3: ubi_attach_mtd_dev:VID header offset: 2048 (aligned 2048), data offset: 4096
+[    7.269866] UBI-3: ubi_attach_mtd_dev:good PEBs: 442, bad PEBs: 0, corrupted PEBs: 0
+[    7.277669] UBI-3: ubi_attach_mtd_dev:user volume: 1, internal volumes: 1, max. volumes count: 128
+[    7.286557] UBI-3: ubi_attach_mtd_dev:max/mean erase counter: 6/3, WL threshold: 4096, image sequence number: 698104599
+[    7.297336] UBI-3: ubi_attach_mtd_dev:available PEBs: 0, total reserved PEBs: 442, PEBs reserved for bad PEB handling: 8
+[    7.308192] UBI-3: ubi_thread:background thread "ubi_bgt3d" started, PID 315
+[    7.319315] UBIFS-3: background thread "ubifs_bgt3_0" started, PID 318
+[    7.358507] UBIFS-3: recovery needed
+[    7.452528] UBIFS-3: recovery completed
+[    7.455404] UBIFS-3: mounted UBI, volume 0, name "cache"
+[    7.460623] UBIFS-3: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    7.469938] UBIFS-3: FS size: 53329920 bytes (50 MiB, 420 LEBs), journal size 2666496 bytes (2 MiB, 21 LEBs)
+[    7.479736] UBIFS-3: reserved for root: 2518903 bytes (2459 KiB)
+[    7.485732] UBIFS-3: media format: w4/r0 (latest is w4/r0), UUID E1A791EE-1CB8-4DA8-B577-B0B9313ADD31, small LPT model
+[    7.505615] UBI-4: ubi_attach_mtd_dev:attaching mtd14 to ubi4
+[    7.584139] UBI-4: scan_all:scanning is finished
+[    7.592774] UBI-4 warning: print_rsvd_warning: cannot reserve enough PEBs for bad PEB handling, reserved 6, need 38
+[    7.607194] UBI-4: ubi_attach_mtd_dev:attached mtd14 (name "jrdresource", size 18 MiB)
+[    7.618149] UBI-4: ubi_attach_mtd_dev:PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    7.625799] UBI-4: ubi_attach_mtd_dev:min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    7.634269] UBI-4: ubi_attach_mtd_dev:VID header offset: 2048 (aligned 2048), data offset: 4096
+[    7.642990] UBI-4: ubi_attach_mtd_dev:good PEBs: 144, bad PEBs: 2, corrupted PEBs: 0
+[    7.650635] UBI-4: ubi_attach_mtd_dev:user volume: 1, internal volumes: 1, max. volumes count: 128
+[    7.659619] UBI-4: ubi_attach_mtd_dev:max/mean erase counter: 38/15, WL threshold: 4096, image sequence number: 34870392
+[    7.670465] UBI-4: ubi_attach_mtd_dev:available PEBs: 0, total reserved PEBs: 144, PEBs reserved for bad PEB handling: 6
+[    7.681309] UBI-4: ubi_thread:background thread "ubi_bgt4d" started, PID 327
+[    7.733262] UBIFS-4: background thread "ubifs_bgt4_0" started, PID 351
+[    7.768499] UBIFS-4: recovery needed
+[    7.881389] UBIFS-4: recovery completed
+[    7.884255] UBIFS-4: mounted UBI, volume 0, name "jrdresource"
+[    7.890004] UBIFS-4: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    7.899319] UBIFS-4: FS size: 14983168 bytes (14 MiB, 118 LEBs), journal size 2412544 bytes (2 MiB, 19 LEBs)
+[    7.909119] UBIFS-4: reserved for root: 0 bytes (0 KiB)
+[    7.914332] UBIFS-4: media format: w4/r0 (latest is w4/r0), UUID 4487B6CD-2BDF-43EF-B198-A2271A114402, small LPT model
+[    8.371551] jrd_ms_do_scsi_command(): CBWCB([0]=0x16,[1]=0xf9)
+[    8.381111] the dwc->b_suspend is 0
+[    8.383648] msm-dwc3 8a00000.ssusb: Avail curr from USB = 0
+[    8.389370] charger_core_set_charging_current: cyan adapter->usb.current_now = 0 !
+[    8.396958] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    8.404218] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    8.412376] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    8.419182] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    8.426014] charger_core_set_charging_current: cyan mA = 0 !
+[    8.431809] android_work: android_work: did not send uevent (1 1   (null))
+[    8.438344] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    8.445189] cyan mA = 0, bdi->ichrg_limit = 1024
+[    8.449161] cyan bdi->current_limit_ma = 0
+[    8.454447] cyan r2v = 80
+[    8.458836] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[    8.464639] msm-dwc3 8a00000.ssusb: Avail curr from USB = 500
+[    8.470435] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[    8.478657] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    8.485655] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    8.493612] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    8.500173] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    8.508150] charger_core_set_charging_current: cyan mA = 0 !
+[    8.513922] android_work: android_work: sent missed DISCONNECT event
+[    8.519282] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    8.526346] jrd_ms_do_switch_cb : enable mass_storage workqueue
+[    8.531392] jrd_usb_switch start...
+[    8.534726] cyan mA = 0, bdi->ichrg_limit = 1024
+[    8.539298] cyan bdi->current_limit_ma = 0
+[    8.543429] jrd_usb_switch mode: 3
+[    8.546765] jrd_usb_switch cdev: 0xCD96F000
+[    8.550930] jrd_usb_switch new_pid: 0x0196
+[    8.555098] disable_usb
+[    8.557508] the dwc->b_suspend is 0
+[    8.561049] dwc3 8a00000.dwc3: request cd96f080 was not queued to ep0out
+[    8.567621] cyan r2v = 80
+[    8.570283] jrd_usb_config config_tab_size: 15
+[    8.574711] jrd_usb_config i: 6
+[    8.577912] jrd_usb_config func_id: 15, index: 0
+[    8.583207] jrd_usb_config 4042 rndis_qc
+[    8.586260] jrd_usb_config,name: rndis_qc
+[    8.590259] jrd_usb_config func_id: 7, index: 1
+[    8.594838] diag name: diag
+[    8.597544] jrd_usb_config,name: diag
+[    8.601234] jrd_usb_config func_id: 0, index: 2
+[    8.605704] jrd_usb_config,name: ffs
+[    8.609262] jrd_usb_config func_id: 9, index: 3
+[    8.613902] serial
+[    8.615773] jrd_usb_config,name: serial
+[    8.619594] jrd_usb_config func_id: 18, index: 4
+[    8.624374] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[    8.631555] jrd_usb_config,name: mass_storage
+[    8.635226] jrd_usb_config func_id: -1, index: 5
+[    8.639820] jrd_usb_config func_id: -1, index: 6
+[    8.644480] jrd_usb_config func_id: -1, index: 7
+[    9.151760] ffs_adb_init: initialize ffs_adb instance success
+[    9.171413] jrd_usb_enable: jrd_usb_enable:disable_depth:2
+[    9.179694] jrd_usb_switch end
+[    9.181793] ============dynamic switch successed!============
+[    9.238908] read descriptors
+[    9.240759] read strings
+[    9.243695] rndis_qc_function_bind_config: rndis_qc_function_bind_config MAC: 00:00:00:00:00:00
+[    9.257855] RNDIS_IPA NetDev was initializedthe dwc->b_suspend is 0
+[    9.280894] dwc3_gadget_suspend_interrupt(): state:0. Ignore SUSPEND.
+[    9.590405] the dwc->b_suspend is 0
+[    9.592948] msm-dwc3 8a00000.ssusb: Avail curr from USB = 0
+[    9.598694] charger_core_set_charging_current: cyan adapter->usb.current_now = 0 !
+[    9.606189] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    9.613709] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    9.621868] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    9.628234] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    9.635198] charger_core_set_charging_current: cyan mA = 0 !
+[    9.640884] android_work: android_work: did not send uevent (1 1   (null))
+[    9.647641] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    9.654149] cyan mA = 0, bdi->ichrg_limit = 1024
+[    9.658311] cyan bdi->current_limit_ma = 0
+[    9.664003] cyan r2v = 80
+[    9.670237] android_usb gadget: high-speed config #1: 86000c8.android_usb
+[    9.676073] diag: USB channel diag connected
+[    9.680358] msm-dwc3 8a00000.ssusb: Avail curr from USB = 500
+[    9.686194] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[    9.693787] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[    9.701309] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[    9.709186] charger_core_set_charging_current: cyan chip->ibat_max = 0 !
+[    9.715981] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[    9.722856] charger_core_set_charging_current: cyan mA = 0 !
+[    9.728556] android_work: android_work: sent missed DISCONNECT event
+[    9.734838] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[    9.742674] cyan mA = 0, bdi->ichrg_limit = 1024
+[    9.746309] cyan bdi->current_limit_ma = 0
+[    9.750916] cyan r2v = 80
+[    9.831710] android_work: android_work: sent uevent USB_STATE=CONFIGURED
+[   27.961172] battery_core_check_health: tbat:28C,low_poweroff:-20C, high_poweroff:60C,low_disable_charge:0C,high_disable_charge:55C
+[   27.972019] battery_core_measure_temperature: battery ONLINE, health:1  with 28C,ibat:0,ibat_max:1024000, 
+[   28.002393] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[   28.009107] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[   28.016658] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[   28.024607] charger_core_set_charging_current: cyan chip->ibat_max = 1024000 !
+[   28.031898] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[   28.039003] charger_core_set_charging_current: cyan mA = 1024 !
+[   28.044995] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[   28.051057] cyan mA = 500, bdi->ichrg_limit = 1024
+[   28.055458] cyan bdi->current_limit_ma = 500
+[   28.060187] cyan r2v = 88
+[   28.063198] charger_core_set_charging_current: cyan adapter->usb.current_now = 500 !
+[   28.070041] charger_core_set_charging_current: cyan adapter->ac.current_now = 0 !
+[   28.077678] charger_core_set_charging_current: cyan adapter->wireless.current_now = 0 !
+[   28.085512] charger_core_set_charging_current: cyan chip->ibat_max = 1024000 !
+[   28.092715] charger_core_set_charging_current: cyan chip->ichg_max = 2000 !
+[   28.099639] charger_core_set_charging_current: cyan mA = 1024 !
+[   28.105812] bq25601-charger 3-006b: set input limit to 1500mA !!!
+[   28.112813] cyan mA = 500, bdi->ichrg_limit = 1024
+[   28.116564] cyan bdi->current_limit_ma = 500
+[   28.121320] cyan r2v = 88
+[   28.123942] battery_core_check_temperature_threshold: now temp = 28 ,high_temp_value = 45,high_temp_vbat = 4100, reset_voltage_temp = 3 ,fast_charge_low_temp = 15,fast_charge_current = 600
+[   28.141085] battery_core_check_temperature_threshold: bat->props.state = 1 
+[   28.147120] battery_core_check_temperature_threshold: bat->props.fast_temp_charge_state = 0 
+[   28.155600] battery_core_check_temperature_threshold: temperature is normal ,do nothing

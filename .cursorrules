@@ -24,12 +24,15 @@ github/
 ├── docs/                  # Documentation assets
 │   └── ALCATEL+EE71.png  # Device photo
 │
+├── device_info/           # Device information and diagnostics
+│   ├── device_info.txt   # Complete device specifications and info
+│   └── dmesg_full.txt    # Full kernel boot messages
+│
 ├── README.md              # Main documentation (English - default)
 ├── README.ru.md           # Documentation in Russian
 ├── LICENSE                # License file
 ├── .cursorrules           # Cursor IDE configuration
-├── .gitignore            # Git ignore rules
-└── device_info            # Device information file
+└── .gitignore            # Git ignore rules
 ```
 
 **Note:** This repository contains ready-to-use utilities for Alcatel EE71 router. Each tool directory is self-contained with installation scripts and necessary binaries.
@@ -91,6 +94,12 @@ Each tool directory (e.g., `enable_adb_python/`, `backup_via_adb/`, `dropbear/`)
 - SSH server installation package
 - Includes binary, init.d script, and installation script
 - Installs to `/system` on device
+
+**device_info/**:
+- Device information and diagnostic data
+- Contains collected device specifications, system info, and kernel messages
+- Reference data for understanding device hardware and firmware
+- Files: device_info.txt (specs) and dmesg_full.txt (kernel boot messages)
 
 ### Documentation Standards
 - Clear installation steps
