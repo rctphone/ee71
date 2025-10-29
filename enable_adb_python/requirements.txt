@@ -1,0 +1,6 @@
+# Python dependencies for EE71 router utilities
+
+# PyUSB - USB access library for Python
+# Required for: scripts/enable_adb.py (tcl_switch_usb.py)
+# Also requires system libusb library (install via: brew install libusb on macOS)
+pyusb>=1.2.0

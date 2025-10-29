@@ -1,0 +1,120 @@
+# EE71 Router Utilities - Cursor Rules
+
+## Project Overview
+This repository contains utilities, scripts, and modifications for the EE71 mobile broadband router.
+Target device: EE71 router with custom firmware modifications.
+
+## Repository Structure
+
+```
+github/
+├── enable_adb_python/    # ADB activation tool (cross-platform replacement for TCL_SWITCH_UTILITY.exe)
+│   ├── enable_adb.py     # Main Python script
+│   └── requirements.txt  # Python dependencies
+│
+├── backup_via_adb/        # Device partition backup utility
+│   └── backup_ee71.sh    # Backup script for critical partitions
+│
+├── dropbear/              # SSH server installation
+│   ├── install.sh        # Installation script
+│   └── files/            # Binary and init scripts
+│       ├── dropbearmulti-2014.66  # Dropbear binary
+│       └── dropbear               # Init.d startup script
+│
+├── docs/                  # Documentation assets
+│   └── ALCATEL+EE71.png  # Device photo
+│
+├── README.md              # Main documentation (English - default)
+├── README.ru.md           # Documentation in Russian
+├── LICENSE                # License file
+├── .cursorrules           # Cursor IDE configuration
+├── .gitignore            # Git ignore rules
+└── device_info            # Device information file
+```
+
+**Note:** This repository contains ready-to-use utilities for Alcatel EE71 router. Each tool directory is self-contained with installation scripts and necessary binaries.
+
+## Development Guidelines
+
+### Language Requirements
+- **Code comments**: ALWAYS in English
+- **Documentation**: 
+  - README.md - English version (primary/default)
+  - README.ru.md - Russian version (translation)
+  - **CRITICAL:** Both README files MUST be kept in sync
+  - When updating one README, always update the other with equivalent changes
+  - Structure, sections, and content should match between both versions
+  - Only the language should differ, not the information or structure
+- **Commit messages**: English preferred
+- **Variable/function names**: English only
+
+### Working with Files in GitHub Directory
+- Each tool directory is self-contained and ready for use
+- Tool directories include:
+  - Installation scripts (`install.sh` for dropbear)
+  - Required binaries and configuration files
+  - Dependencies documentation (requirements.txt, etc.)
+- Maintain tool independence - each tool should work standalone
+- When updating tools, ensure all dependencies are included in the tool directory
+
+### Code Style
+- **Shell scripts**: 
+  - Use `#!/bin/sh` for router compatibility (BusyBox ash)
+  - POSIX-compliant syntax
+  - English comments
+  - Clear error messages with `[ERR]` prefix
+  
+- **Python scripts**:
+  - Python 3.6+ compatibility
+  - Type hints where applicable
+  - English docstrings and comments
+  - Follow PEP 8
+
+### Tool Directories
+Each tool directory (e.g., `enable_adb_python/`, `backup_via_adb/`, `dropbear/`) should:
+- Be self-contained and ready to use
+- Include all necessary files (binaries, scripts, configs)
+- Have clear installation/usage instructions in main README.md
+- Use consistent structure where applicable
+
+**enable_adb_python/**:
+- Python utility for enabling ADB mode via USB MSC
+- Includes Python script and requirements.txt
+- Cross-platform (macOS, Linux, Windows)
+
+**backup_via_adb/**:
+- Shell script for backing up device partitions
+- Uses ADB with root access
+- Creates timestamped backup directories
+
+**dropbear/**:
+- SSH server installation package
+- Includes binary, init.d script, and installation script
+- Installs to `/system` on device
+
+### Documentation Standards
+- Clear installation steps
+- Prerequisites listed upfront
+- Examples for common use cases
+- Troubleshooting section
+- Security warnings where applicable
+
+## Git Workflow
+- `.gitignore` configured for build artifacts, backups, and secrets
+- Never commit:
+  - SSH keys
+  - Device backups (*.ab files)
+  - Compiled binaries (except in tools/ as archives)
+  - Temporary files
+  - IDE-specific files
+
+## Testing
+- Test scripts on actual router hardware when possible
+- Document hardware requirements
+- Include dry-run modes where applicable
+
+## Security
+- No hardcoded passwords or keys
+- Use environment variables for sensitive data
+- Document security implications of modifications
+- Warn users about warranty and bricking risks
